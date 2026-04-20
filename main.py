@@ -74,7 +74,7 @@ def start_analysis(
 
         # Write the feature importance to a unique CSV file
         feature_importance_df.to_csv(
-            os.path.join(data_folder, './feature_importance_ RS1{}.csv'.format(test_data_with_soil_file_name)))
+            os.path.join(data_folder, './feature_importance_{}.csv'.format(test_data_with_soil_file_name)))
 
     except AttributeError:
         pass
@@ -104,7 +104,7 @@ def start_analysis(
         }
     )
     print(result_df)
-    result_df.to_csv(os.path.join(data_folder, './predictions new model RS1_{}.csv'.format(test_data_with_soil_file_name)))
+    result_df.to_csv(os.path.join(data_folder, './predictions new model{}.csv'.format(test_data_with_soil_file_name)))
 
     # Write cross-validated R squared and MSE to result CSV file
     result_dict = {
